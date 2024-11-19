@@ -6,8 +6,8 @@ const CREDENTIALS = {
     tenantId: "app~eb250dbe-3781-4f87-b031-b802f5125913",
     preferenceCenterId: "781e14e2-d9bf-4b86-8e0b-2c273c30d724",
     primaryIdentifier: 'email',
-    locationCode: 'ID',
-    languageCode: 'id',
+    locationCode: 'US',
+    languageCode: 'en',
     implicitFlow: true,
     implicitRecordConsents: false,
     allMandatory: false
