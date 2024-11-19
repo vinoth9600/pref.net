@@ -5,18 +5,21 @@
 <!-- THIS CODE IS FOR TESTING PURPOSE ONLY, DO NOT USE IT IN PRODUCTION. 
 After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
 <!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
+
+<!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
 <script>
 (function () {
 	var s = document.createElement('script');
-	s.src = 'https://cdn-app2.securiti.ai/consent/cookie-consent-sdk-loader.js';
-	s.setAttribute('data-tenant-uuid', '47e365a3-9686-4395-a158-4b077c707924');
-	s.setAttribute('data-domain-uuid', 'f6e7a1d6-569a-4912-bae1-ca8deedc4666');
-	s.setAttribute('data-backend-url', 'https://app2.securiti.ai');
+	s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader.js';
+	s.setAttribute('data-tenant-uuid', 'fc7a1c8b-281a-461f-8245-d27a7164f69b');
+	s.setAttribute('data-domain-uuid', '893c7633-cbad-45e4-85d0-f948069ea291');
+	s.setAttribute('data-backend-url', 'https://app.securiti.ai');
 	s.setAttribute('data-skip-css', 'false');
 	s.defer = true;
 	var parent_node = document.head || document.body;
 	parent_node.appendChild(s);
 })()
+</script>
 </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
