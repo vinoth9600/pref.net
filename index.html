@@ -31,7 +31,20 @@ After adding this script, call setConsentBannerParams({uuid: <unique id> }) to s
 
 </head>
 <body>
-    
+
+	
+<script src='https://cdn-prod.securiti.ai/consent/form-consent-sdk.js'></script>
+<script>window.addEventListener('load', function() {
+    FormConsentSDK.initialize({
+        codeGenMetadata:{"formPropertyId":"9","formSelector":"[id*=\"iframeIntegrationExampleForm\"]","subjectIdentifiers":[{"name":"polis","selector":"[name = \"firstName\"]","isPrimary":true},{"name":"Last Name","selector":"[name = \"lastName\"]","isPrimary":false},{"name":"Email","selector":"[name = \"email\"]","isPrimary":false}],"consentIdentifiers":[{"type":"checkbox","name":"cmp__prefcenter__consent__7__1","selector":"[name=\"cmp__prefcenter__consent__7__1\"]","propertyId":50958,"consentValue":"checked"}],"consentTrigger":{"action":"submit","selector":""}},
+        url: 'https://app.securiti.ai/privaci/v1/',
+        authToken:'2ce7eeda-b636-4dc2-b3fb-8a19aa46339f',
+        orgId:'1',
+        onConsentSuccess: null,
+        onConsentFailure: null
+    })
+})</script>
+	
     <section>
         <form id="iframeIntegrationExampleForm">
             <div class="form-group">
