@@ -1,71 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	
-<!-- THIS CODE IS FOR TESTING PURPOSE ONLY, DO NOT USE IT IN PRODUCTION. 
-After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
-<!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
-
-<!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
-<script>
-(function () {
-	var s = document.createElement('script');
-	s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader.js';
-	s.setAttribute('data-tenant-uuid', 'fc7a1c8b-281a-461f-8245-d27a7164f69b');
-	s.setAttribute('data-domain-uuid', '893c7633-cbad-45e4-85d0-f948069ea291');
-	s.setAttribute('data-backend-url', 'https://app.securiti.ai');
-	s.setAttribute('data-skip-css', 'false');
-	s.defer = true;
-	var parent_node = document.head || document.body;
-	parent_node.appendChild(s);
-})()
-</script>
-</script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preference Center - Iframe integration example</title>
-    <link rel="stylesheet" href="client.css">
-	
-
-
+  <title>Privacy Notice</title>
+  <style>
+    #privacyFrame {
+      display: none;
+      width: 100%;
+      height: 800px;
+      border: none;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
-	
-<script src='https://cdn-prod.securiti.ai/consent/form-consent-sdk.js'></script>
-<script>window.addEventListener('load', function() {
-    FormConsentSDK.initialize({
-        codeGenMetadata:{"formPropertyId":"9","formSelector":"[id*=\"iframeIntegrationExampleForm\"]","subjectIdentifiers":[{"name":"polis","selector":"[name = \"firstName\"]","isPrimary":true},{"name":"Last Name","selector":"[name = \"lastName\"]","isPrimary":false},{"name":"Email","selector":"[name = \"email\"]","isPrimary":false}],"consentIdentifiers":[{"type":"checkbox","name":"cmp__prefcenter__consent__7__1","selector":"[name=\"cmp__prefcenter__consent__7__1\"]","propertyId":50958,"consentValue":"checked"}],"consentTrigger":{"action":"submit","selector":""}},
-        url: 'https://app.securiti.ai/privaci/v1/',
-        authToken:'2ce7eeda-b636-4dc2-b3fb-8a19aa46339f',
-        orgId:'1',
-        onConsentSuccess: null,
-        onConsentFailure: null
-    })
-})</script>
-	
-    <section>
-        <form id="iframeIntegrationExampleForm">
-            <div class="form-group">
-                <label for="firstName">polis</label>
-                <input name="firstName" id="firstName" placeholder="Enter FirstName" />
-            </div>
-            <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input name="lastName" id="lastName" placeholder="Enter LastName" />
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" placeholder="Enter email" />
-            </div>
-            <!-- Load iframe -->
-            <iframe id="preferenceIframe" height="200" src="./iframe/preference-center.html" ></iframe>
-        </form>
-    </section>
+  <button onclick="document.getElementById('privacyFrame').style.display='block'">
+    View Privacy Notice
+  </button>
 
-<!-- You may style the button by overriding class "cmp-revoke-consent" -->
-<button class="cmp-revoke-consent">Manage Cookie Preferences</button>
-    <script src="./client.js"></script>
+  <iframe 
+    id="privacyFrame"
+    src="https://privacy-central2.securiti.ai/notice-embed/03aa96d1-cc54-4f8b-ad98-76a4d168e45f">
+  </iframe>
+
 </body>
 </html>
